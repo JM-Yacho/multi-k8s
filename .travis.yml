@@ -21,3 +21,5 @@ after_success:
   - docker push jmy98/multi-nginx
   - docker push jmy98/multi-server
   - docker push jmy98/multi-worker
+
+  
