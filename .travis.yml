@@ -21,3 +21,17 @@ after_success:
   - docker push jmy98/multi-nginx
   - docker push jmy98/multi-server
   - docker push jmy98/multi-worker
+
+deploy:
+  provider: eleasticbeanstalk
+  region: us-east-2
+  app: multi-docker
+  env: MultiDocker-env
+  bucket_name: elasticbeanstalk-us-east-2-777225698842
+  bucket_path: docker-multi
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+
+  
