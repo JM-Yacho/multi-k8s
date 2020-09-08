@@ -23,7 +23,7 @@ after_success:
   - docker push jmy98/multi-worker
 
 deploy:
-  provider: eleasticbeanstalk
+  provider: elasticbeanstalk
   region: us-east-2
   app: multi-docker
   env: MultiDocker-env
